@@ -2,12 +2,14 @@
 
 import { useEditor, EditorContent } from "@tiptap/react";
 
+import { Color } from "@tiptap/extension-color";
 import StarterKit from "@tiptap/starter-kit";
 import BulletList from "@tiptap/extension-bullet-list";
 import FontFamily from "@tiptap/extension-font-family";
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
 import Heading from "@tiptap/extension-heading";
+import Highlight from "@tiptap/extension-highlight";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Table from "@tiptap/extension-table";
@@ -68,6 +70,8 @@ export const Editor = () => {
       Underline,
       FontFamily,
       TextStyle,
+      Highlight.configure({ multicolor: true }),
+      Color,
     ],
     editorProps: {
       attributes: {
@@ -78,8 +82,6 @@ export const Editor = () => {
     },
     content: `
         <p>This is a basic example of implementing images. Drag to re-order.</p>
-        <img src="https://placehold.co/800x400" />
-        <img src="https://placehold.co/800x400/6A00F5/white" />
       `,
   });
 
