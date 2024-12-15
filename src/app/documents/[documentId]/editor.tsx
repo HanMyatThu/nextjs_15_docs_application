@@ -20,6 +20,7 @@ import TableRow from "@tiptap/extension-table-row";
 import TextStyle from "@tiptap/extension-text-style";
 import TextAlign from "@tiptap/extension-text-align";
 import Underline from "@tiptap/extension-underline";
+import { FontSizeExtension } from "@/extensions/font-size";
 
 import { useEditorStore } from "@/store/use-editor-store";
 
@@ -53,6 +54,7 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      FontSizeExtension,
       BulletList,
       TaskList,
       TaskItem.configure({
